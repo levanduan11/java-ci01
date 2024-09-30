@@ -28,7 +28,7 @@ jobs:
           ./gradlew clean
           ./gradlew test
           ./gradlew build
-          
+
       - name: Check for JAR file
         run: |
             if [ -f app/build/libs/app-0.0.1-SNAPSHOT.jar ]; then
@@ -61,4 +61,4 @@ jobs:
           context: .
           dockerfile: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/javaci:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/javaci:latest
