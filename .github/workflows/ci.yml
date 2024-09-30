@@ -28,6 +28,14 @@ jobs:
           ./gradlew clean
           ./gradlew test
           ./gradlew build
+      - name: Check for JAR file
+        run: |
+            if [ -f app/build/libs/app-0.0.1-SNAPSHOT.jar ]; then
+              echo "JAR file exists"
+            else
+              echo "JAR file not found"
+              exit 1
+            fi      
       - name: List contents of jar file 
         run: |
           echo "Contents of app/build/libs:"
