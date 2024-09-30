@@ -1,0 +1,2 @@
+rootProject.name = 'java-ci01'
+include ':app'
